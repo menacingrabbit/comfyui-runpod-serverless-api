@@ -1,0 +1,92 @@
+{
+  "input": {
+    "workflow": {
+      "1": {
+        "inputs": {
+          "value": 2455973070,
+          "image": [
+            "2",
+            0
+          ],
+          "dit": [
+            "3",
+            0
+          ],
+          "vae": [
+            "4",
+            0
+          ]
+        },
+        "class_type": "SeedVR2VideoUpscaler",
+        "_meta": {
+          "title": "SeedVR2VideoUpscaler"
+        }
+      },
+      "2": {
+        "inputs": {
+          "image": "Dschungelcamp.jpg"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "LoadImage"
+        }
+      },
+      "3": {
+        "inputs": {
+          "filename": "seedvr2_ema_7b_fp16.safetensors"
+        },
+        "class_type": "SeedVR2LoadDiTModel",
+        "_meta": {
+          "title": "SeedVR2LoadDiTModel"
+        }
+      },
+      "4": {
+        "inputs": {
+          "filename": "ema_vae_fp16.safetensors"
+        },
+        "class_type": "SeedVR2LoadVAEModel",
+        "_meta": {
+          "title": "SeedVR2LoadVAEModel"
+        }
+      },
+      "8": {
+        "inputs": {
+          "text": "ComfyUI_SeedVR2-image",
+          "images": [
+            "1",
+            0
+          ]
+        },
+        "class_type": "ComfyUISaveAs",
+        "_meta": {
+          "title": "ComfyUISaveAs"
+        }
+      },
+      "10": {
+        "inputs": {
+          "value": null,
+          "source": [
+            "8",
+            1
+          ]
+        },
+        "class_type": "PreviewAny",
+        "_meta": {
+          "title": "PreviewAny"
+        }
+      },
+      "18": {
+        "inputs": {
+          "images": [
+            "8",
+            0
+          ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+          "title": "PreviewImage"
+        }
+      }
+    }
+  }
+}
