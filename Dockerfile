@@ -7,7 +7,7 @@ RUN comfy node install --exit-on-fail ComfyUI-SaveAs
 
 # download models into comfyui
 RUN comfy model download --url https://huggingface.co/numz/SeedVR2_comfyUI/blob/main/ema_vae_fp16.safetensors --relative-path models/vae --filename ema_vae_fp16.safetensors
-RUN comfy model download --url https://huggingface.co/numz/SeedVR2_comfyUI/blob/main/seedvr2_ema_7b_fp16.safetensors --relative-path models --filename eedvr2_ema_7b_fp16.safetensors
+RUN comfy model download --url https://huggingface.co/numz/SeedVR2_comfyUI/resolve/main/seedvr2_ema_7b_fp16.safetensors --relative-path models --filename seedvr2_ema_7b_fp16.safetensors
 # RUN # Could not find URL for seedvr2_ema_7b_fp16.safetensors
 
 # copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
